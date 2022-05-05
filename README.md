@@ -134,9 +134,6 @@ python3 -u qagnn.py --dataset csqa --mode 'eval_simple' --experiment_model 'lm_m
   </tr>
 </table>
 
-## Ciate
-
-
 ## Acknowledgment
 This repo is built upon the following work:
 ```
