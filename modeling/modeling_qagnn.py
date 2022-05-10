@@ -1,24 +1,15 @@
-import os
-import pickle
-
 import torch.nn as nn
 import math
-from modeling.modeling_encoder import TextEncoder, TextScoreEncoder, MODEL_NAME_TO_CLASS, TextPromptEncoder, \
-    QAGNNPromptEncoder,TextEncoderForKBQA
+from modeling.modeling_encoder import TextEncoder, MODEL_NAME_TO_CLASS
 import torch
 from utils.data_utils import load_input_tensors, load_sparse_adj_data_with_contextnode, \
-    MultiGPUSparseAdjDataBatchGenerator, load_sparse_adj_data_and_metapath_with_contextnode, \
-    load_sparse_adj_data_and_metapathonehot_with_contextnode, load_input_tensors_with_soft_prompt, \
-    load_sparse_adj_data_with_contextnode_with_triple_prompt,SPECIAL_TOKENS,BatchGenerator,load_input_tensors_for_kbqa,\
-    load_sparse_adj_data_and_metapathonehot_for_kbqa_with_contextnode, MultiGPUSparseAdjDataBatchGeneratorKBQA
-from utils.layers import GELU,CustomizedEmbedding,MultiheadAttPoolLayer,MLP,CustomizedEmbeddingPrompt
+    MultiGPUSparseAdjDataBatchGenerator, load_sparse_adj_data_and_metapathonehot_with_contextnode
+from utils.layers import GELU,CustomizedEmbedding,MultiheadAttPoolLayer,MLP
 from torch.autograd import Variable
 from torch_geometric.nn import MessagePassing
-from torch_geometric.utils import add_self_loops, degree, softmax
+from torch_geometric.utils import softmax
 import torch.nn.functional as F
-from torch_scatter import scatter_add, scatter
-from torch_geometric.nn.inits import glorot, zeros
-from transformers import AutoTokenizer, RobertaTokenizer, RobertaTokenizerFast
+from torch_scatter import scatter
 
 def make_one_hot(labels, C):
     '''

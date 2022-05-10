@@ -1,14 +1,13 @@
 import torch
 import torch.nn as nn
 import numpy as np
-import os
 from transformers import (OPENAI_GPT_PRETRAINED_CONFIG_ARCHIVE_MAP, BERT_PRETRAINED_CONFIG_ARCHIVE_MAP,
                           XLNET_PRETRAINED_CONFIG_ARCHIVE_MAP, ROBERTA_PRETRAINED_CONFIG_ARCHIVE_MAP)
 try:
     from transformers import ALBERT_PRETRAINED_CONFIG_ARCHIVE_MAP
 except:
     pass
-from transformers import AutoModel, RobertaModel
+from transformers import AutoModel
 from utils.layers import MeanPoolLayer,MaxPoolLayer,EmbeddingDropout,RNNDropout,pad_packed_sequence,pack_padded_sequence
 from utils.data_utils import get_gpt_token_num
 

@@ -17,8 +17,7 @@ from transformers import RobertaTokenizer
 
 from utils.other_utils import freeze_net, unfreeze_net
 from utils.parser_utils import get_parser
-from utils.other_utils import bool_flag, export_config, check_path, get_dataloader, get_optimizer, get_model,\
-    get_kbqa_dataloader
+from utils.other_utils import bool_flag, export_config, check_path, get_dataloader, get_model
 from utils import other_utils
 
 DECODER_DEFAULT_LR = {
