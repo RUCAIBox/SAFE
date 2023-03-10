@@ -1,6 +1,6 @@
 # Great Truths are Always Simple: A Rather Simple Knowledge Encoder for Enhancing the Commonsense Reasoning Capacity of Pre-Trained Models
 
-This repo provides the source code & data of our paper: [Great Truths are Always Simple: A Rather Simple Knowledge Encoder for Enhancing the Commonsense Reasoning Capacity of Pre-Trained Models](https://arxiv.org/abs/xxx) (NAACL-Findings 2022).
+This repo provides the source code & data of our paper: [Great Truths are Always Simple: A Rather Simple Knowledge Encoder for Enhancing the Commonsense Reasoning Capacity of Pre-Trained Models](https://arxiv.org/abs/2205.01841) (NAACL-Findings 2022).
 
 ```
 @InProceedings{jiang-safe-2022,
